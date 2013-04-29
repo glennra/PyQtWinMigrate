@@ -25,7 +25,7 @@ class QWinHost : QWidget
 {
 
 %TypeHeaderCode
-#include "qwinhost.h"
+#include "moc_qwinhost.h"
 %End
 
 public:
