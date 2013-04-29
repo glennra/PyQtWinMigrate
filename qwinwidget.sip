@@ -23,11 +23,16 @@ class QWinWidget : QWidget
 {
 
 %TypeHeaderCode
-#include "qwinwidget.h"
+#include "moc_qwinwidget.h"
 %End
 
 public:
-    QWinWidget( HWND hParentWnd, QObject *parent /TransferThis/= 0, Qt::WFlags f = 0 );
+    QWinWidget( int hParentWnd, QObject *parent /TransferThis/= 0, Qt::WFlags f = 0 ) [(HWND hParentWnd, QObject *parent, Qt::WFlags f)];
+%MethodCode
+        Py_BEGIN_ALLOW_THREADS
+        sipCpp = new sipQWinWidget((HWND)a0, a1, *a2);
+        Py_END_ALLOW_THREADS
+%End 
     ~QWinWidget();
 
     void show();

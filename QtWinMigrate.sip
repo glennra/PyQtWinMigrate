@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
- %Module PyQtWinMigrate 0
+ %Module QtWinMigrate 0
 
 //%Platforms {WS_WIN}
 
@@ -23,3 +23,4 @@
 
 %Include qwinhost.sip
 %Include qwinwidget.sip
+%Include qmfcapp.sip
